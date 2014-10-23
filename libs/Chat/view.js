@@ -52,7 +52,7 @@ var Backbone = require('backbone'),
 			 * @returns {Boolean}
 			 */
 			isValid: function(text) {
-				if (text.trim().length > 0 && text.trim().length <= 40) {
+				if (text.length > 0 && text.length <= 40) {
 					return true;
 				}
 				else {
