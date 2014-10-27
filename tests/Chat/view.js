@@ -29,19 +29,17 @@ suite('Testing Backbone Chat', function() {
 
 		assert.isTrue(this.chat.onBtnClick.calledOnce);
 	});
-	
+
 	test('Test - if valid message is stored', function() {
 		var testMessage = 'Hi dude.';
 
 		Backbone.$(this.chat.ui.msgInput).val(testMessage);
 		Backbone.$(this.chat.ui.sendBtn).trigger('click');
 
-		// is message a string? (because of 100% coverage)
-		assert.isString(testMessage);
 		// is message in the messages array?
 		assert.include(this.chat.messages, testMessage);
 	});
-	
+
 	test('Test - is validator works well', function() {
 		var testValidMessage = 'Hai Dudes.';
 

@@ -25,7 +25,7 @@ var Backbone = require('backbone'),
 			events : {
 				'click @ui.sendBtn' : 'onBtnClick'
 			},
-			
+
 			/**
 			 * On Send button click event handler.
 			 */
@@ -34,7 +34,7 @@ var Backbone = require('backbone'),
 
 				this.addMessage(message);
 			},
-			
+
 			/**
 			 * Add a message if it is valid, then call render method.
 			 * @param {String} text Text of the message.
@@ -45,7 +45,7 @@ var Backbone = require('backbone'),
 					this.renderMessages();
 				}
 			},
-			
+
 			/**
 			 * Checks if the given text is valid or not.
 			 * @param {String} text Text of the message.
@@ -67,7 +67,7 @@ var Backbone = require('backbone'),
 			renderMessages: function() {
 				var renderedMessages = '',
 					messagesCnt      = this.$(this.ui.messagesCnt);
-				
+
 				for (var i = 0; i < this.messages.length; i++) {
 					renderedMessages += '<li>' + this.messages[i] + '</li>';
 				}
